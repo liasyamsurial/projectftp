@@ -6,7 +6,7 @@
 
   use IO::Socket ;
 
-  my $port = $ARGV[0] || 6123 ;
+  my $port = $ARGV[0] || 6898;
   my $save_dir = './files' ;
   
 #############
@@ -20,12 +20,12 @@
   
   my $server = IO::Socket::INET->new(
       Listen => 5,
-      LocalAddr => '192.168.182.136',
+      LocalAddr => '10.0.2.15',
       LocalPort => $port ,
       Proto     => 'tcp'
   ) or die "Can't create server socket: $!";
   
-  print "Server opened: 192.168.182.136:$port\nWaiting clients...\n\n" ;
+  print "Server opened: 10.0.2.15:$port\nWaiting clients...\n\n" ;
   
   while( my $client = $server->accept ) {
     print "\nNew client!\n" ;
