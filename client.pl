@@ -5,7 +5,7 @@
   use IO::Socket ;
   $bandwidth = 1024*5 ; # 5Kb/s
   
-  &send_file( $ARGV[0] , $ARGV[1]||'localhost' , $ARGV[2]||6123 ) ;
+  &send_file( $ARGV[0] , $ARGV[1]||'localhost' , $ARGV[2]||6898 ) ;
   
   exit;
 
